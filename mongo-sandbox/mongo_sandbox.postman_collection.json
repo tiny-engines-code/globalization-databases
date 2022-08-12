@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "5e4862c6-f8a8-4bfd-b4a8-0f01c70f185c",
+		"name": "mongo_sandbox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/document",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"email\": \"chris.lomeli@chrislomeli.com\",\n    \"name\": \"Email Document\",\n    \"department\" : {\n        \"departmentName\": \"Writing\",\n        \"location\": \"Canada\"\n    },\n    \"strings\": [\n      {\n        \"stringName\": \"Postgres\",\n        \"description\": \"Oldie but good\"\n      },\n      {\n        \"stringName\": \"MongoDB\",\n        \"description\": \"Check out the ALTAS platform\"\n      },\n      {\n         \"stringName\": \"DynamoDB\",\n        \"description\": \"Great keystore - not a busness DB\"\n      }\n    ]\n  }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/document",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/document",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/document/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/document/61fbc2392c482f549a7f8e9e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"document",
+						"61fbc2392c482f549a7f8e9e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/document",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"62043bd5110a7e2f4c8600d1\",\n    \"name\": \"Push Notification\",\n    \"email\": \"chris.lomeli@chrislomeli.com\",\n    \"department\": {\n        \"departmentName\": \"Writing\",\n        \"location\": \"Canada\"\n    },\n    \"strings\": [\n      {\n        \"stringName\": \"Postgres\",\n        \"description\": \"Oldie but good\"\n      },\n      {\n        \"stringName\": \"MongoDB\",\n        \"description\": \"Check out the ALTAS platform\"\n      },\n      {\n         \"stringName\": \"DynamoDB\",\n        \"description\": \"Great keystore - not a busness DB\"\n      },\n         {\n            \"stringName\": \"New String\",\n            \"description\": \"inserted new string\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/document",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/document/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/document/62044023449e3312852a2c84",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"document",
+						"62044023449e3312852a2c84"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

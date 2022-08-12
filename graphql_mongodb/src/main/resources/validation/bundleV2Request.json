@@ -1,0 +1,60 @@
+{
+  "type": "object",
+  "required": [
+    "format"
+  ],
+  "properties": {
+    "teamId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "projectId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "withChildren": {
+      "type": "boolean",
+      "default": false
+    },
+    "format": {
+      "type": "string"
+    },
+    "languageIds": {
+      "type": "array",
+      "minItems": 1
+    },
+    "filterType": {
+      "type": "string"
+    },
+    "filterValues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "required": [
+        "teamId"
+      ]
+    },
+    {
+      "required": [
+        "projectId"
+      ]
+    }
+  ],
+  "dependencies": {
+    "filterType": {
+      "required": [
+        "filterValues"
+      ]
+    },
+    "filterValues": {
+      "required": [
+        "filterType"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "stringsId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "marketplaceIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "stringsId",
+    "marketplaceIds"
+  ]
+}

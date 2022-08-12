@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "9779c659-547b-4a91-a8cb-3e9ff36e5520",
+		"name": "rdms_sandbox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/document",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"email\": \"chris.lomeli@chrislomeli.com\",\n    \"name\": \"Email Document\",\n    \"department\" : {\n        \"departmentName\": \"Writing\",\n        \"location\": \"Canada\"\n    },\n    \"strings\": [\n      {\n        \"stringName\": \"Postgres\",\n        \"description\": \"Oldie but good\"\n      },\n      {\n        \"stringName\": \"MongoDB\",\n        \"description\": \"Check out the ALTAS platform\"\n      },\n      {\n         \"stringName\": \"DynamoDB\",\n        \"description\": \"Great keystore - not a busness DB\"\n      }\n    ]\n  }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/document",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/document",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/document",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/strings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/document",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/document/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/document/61fbc2392c482f549a7f8e9e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"document",
+						"61fbc2392c482f549a7f8e9e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/document",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"201f3dd8-4c14-41ed-a98f-ac04f4532873\",\n    \"name\": \"New Notification\",\n    \"email\": \"chris.jones@chrislomeli.com\",\n    \"department\": {\n        \"departmentName\": \"Writing\",\n        \"location\": \"Canada\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/document",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/document/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/document/62044023449e3312852a2c84",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"document",
+						"62044023449e3312852a2c84"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

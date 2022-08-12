@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "properties": {
+    "teamId": {
+      "type": "string"
+    },
+    "projectId": {
+      "type": "string"
+    },
+    "withChildren": {
+      "type": "boolean"
+    },
+    "filterType": {
+      "type": "string",
+      "enum": [
+        "STRING_KEYS"
+      ]
+    },
+    "values": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "filterType",
+    "values"
+  ]
+}

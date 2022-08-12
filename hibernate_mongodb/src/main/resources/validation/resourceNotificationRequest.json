@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "targetResourceId": {
+      "type": "string",
+      "format": "uuid",
+      "minLength": 1
+    },
+    "targetResourceType": {
+      "type": "string",
+      "enum": [
+        "localize_STRINGS",
+        "localize_PROJECTS"
+      ]
+    }
+  },
+  "required": [
+    "targetResourceId",
+    "targetResourceType"
+  ]
+}
